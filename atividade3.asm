@@ -1,9 +1,11 @@
+# carregamento de variáveis 
 lw x10, f
 lw x11, g
 lw x12, h
 lw x13, i
 lw x14, j
 
+# escopo da condicional
 beq x13, x14, end1
 
 sub x10, x11, x12
