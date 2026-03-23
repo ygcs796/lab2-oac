@@ -1,7 +1,7 @@
-addi x11, x0, 1 # armazenando um imediato que, no formato binário, acende o primeiro led (led 2, associado ao input 1 do arduino virtual)
-addi x12, x0, 1 # registrador que vai representar o botão ligado
+addi x11, x0, 1 # armazenando um imediato que, no formato binário, acende o primeiro led
+addi x12, x0, 1 # registrador que vai representar o botão ligado (input 1 do arduino virtual, entrada 8 -> estado ligado representado por 000001)
 addi x14, x0, 32 # registrador que vai verificar se chegou ao último led 
-add x13, x0, x0 # registrador que vai representar o atual estado do botão
+add x13, x0, x0 # registrador que vai representar o atual estado do botão 
 sb x11, 1029(x0) # escrevendo 000001 nos pinos 2-7, para ligar apenas o 2
 sb x12, 1027(x0) # escrevendo zero nos pinos 8-13 (usaremos apenas o 8, entretanto)
 
